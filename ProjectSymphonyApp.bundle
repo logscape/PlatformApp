@@ -1,0 +1,60 @@
+<Bundle name="ProjectSymphonyApp" version="1.0" system="false">
+  <status>UNINSTALLED</status>
+  <owner>info@logscape.com</owner>
+  <services>
+	<Service>
+      	<name>CpuMemStats</name>
+		<resourceSelection>type contains Manage</resourceSelection>
+      	<fork>true</fork>
+      	<background>true</background>
+		<instanceCount>-1</instanceCount>
+		<pauseSeconds>299</pauseSeconds>
+		<script>statspuller_cpumem.groovy</script>
+    </Service>
+	<Service>
+      	<name>GridStats</name>
+		<resourceSelection>type contains Manage</resourceSelection>
+      	<fork>true</fork>
+      	<background>true</background>
+		<instanceCount>-1</instanceCount>
+		<pauseSeconds>299</pauseSeconds>
+		<script>statspuller_grid.groovy</script>
+    </Service>
+	<Service>
+      	<name>IOStats</name>
+		<resourceSelection>type contains Manage</resourceSelection>
+      	<fork>true</fork>
+      	<background>true</background>
+		<instanceCount>-1</instanceCount>
+		<pauseSeconds>299</pauseSeconds>
+		<script>statspuller_io.groovy</script>
+    </Service>
+	<Service>
+      	<name>OtherStats</name>
+		<resourceSelection>type contains Manage</resourceSelection>
+      	<fork>true</fork>
+      	<background>true</background>
+		<instanceCount>-1</instanceCount>
+		<pauseSeconds>299</pauseSeconds>
+		<script>statspuller_other.groovy</script>
+    </Service>
+	<Service>
+      	<name>SessionStats</name>
+		<resourceSelection>type contains Manage</resourceSelection>
+      	<fork>true</fork>
+      	<background>true</background>
+		<instanceCount>-1</instanceCount>
+		<pauseSeconds>299</pauseSeconds>
+		<script>statspuller_session.groovy</script>
+    </Service>
+    <Service>
+      	<name>SessionAttributes</name>
+		<resourceSelection>type contains Manage</resourceSelection>
+      	<fork>true</fork>
+      	<background>true</background>
+		<instanceCount>-1</instanceCount>
+		<pauseSeconds>299</pauseSeconds>
+		<script>statspuller_session_attributes.groovy</script>
+    </Service>
+  </services>
+</Bundle>
